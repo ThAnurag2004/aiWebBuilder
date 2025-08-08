@@ -10,7 +10,7 @@ const App = () => {
   
 
   const ai = new GoogleGenAI({
-    apiKey: "AIzaSyCuYSXHhn7eTwBrMIXwclRiPEwCfA04aEg",
+    apiKey: "",
   });
 
   async function main(prompt) {
