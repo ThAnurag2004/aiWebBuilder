@@ -10,7 +10,7 @@ const App = () => {
   
 
   const ai = new GoogleGenAI({
-    apiKey: "",
+    apiKey: import.meta.env.GEMINI_API_KEY,
   });
 
   async function main(prompt) {
