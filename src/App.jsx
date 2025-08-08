@@ -42,8 +42,8 @@ const App = () => {
   };
 
   return (
-    <div className="min-h-screen grid grid-cols-2 gap-4 p-4 bg-gray-100">
-      <div className="space-y-4">
+    <div className="md:h-screen overflow-hidden grid grid-cols-1 md:grid-cols-2 gap-4 p-4 bg-gray-100">
+      <div className="flex flex-col space-y-4 min-h-0 h-full">
         <PromptInput
           prompt={input}
           setPrompt={setInput}
@@ -51,7 +51,9 @@ const App = () => {
         />
         <CodeEditor code={ans} />
       </div>
-      <LivePreview code={ans} />
+      <div className="min-h-0 h-full">
+        <LivePreview code={ans} />
+      </div>
     </div>
   );
 };
