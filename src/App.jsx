@@ -8,9 +8,15 @@ const App = () => {
   const [input, setInput] = useState("");
   const [ans, setAns] = useState("");
   
+  const api = import.meta.env.VITE_GEMINI_API_KEY
+  console.log(api)
+
+  if (!api) {
+    throw new Error("Missing Gemini API key. Please set VITE_GEMINI_API_KEY in your .env file.");
+  }
 
   const ai = new GoogleGenAI({
-    apiKey: "AIzaSyCuYSXHhn7eTwBrMIXwclRiPEwCfA04aEg",
+    apiKey: api,
   });
 
   async function main(prompt) {
@@ -18,6 +24,7 @@ const App = () => {
       model: "gemini-2.5-flash",
       contents: `${prompt}`,
     });
+    console.log(response); // Debug the response structure
     // Adjust this line based on the actual response structure
     const text =
       response.text || response.candidates?.[0]?.content || "No response";
