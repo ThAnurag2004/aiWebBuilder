@@ -31,6 +31,7 @@ const App = () => {
     return text;
   }
 
+  //handling submit button
   const handelSubmit = async (e) => {
     e.preventDefault(); // Prevent form reload
 
