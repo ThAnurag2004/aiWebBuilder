@@ -17,9 +17,13 @@ const LivePreview = ({ code }) => {
   }, [code]);
 
   return (
-    <div className="bg-white h-full w-full rounded shadow overflow-hidden">
-      <h3 className="text-lg font-semibold p-4 border-b">Live Preview</h3>
-      <iframe ref={iframeRef} title="Preview" className="w-full h-[600px] border-none" />
+    <div className="bg-white md:h-full h-screen w-full rounded shadow overflow-hidden">
+      <iframe
+        ref={iframeRef}
+        title="Preview"
+        className="w-full h-full border-none"
+        style={{ minHeight: 0 }}
+      />
     </div>
   );
 };

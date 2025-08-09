@@ -1,6 +1,6 @@
 const PromptInput = ({ prompt, setPrompt, handleSubmit }) => {
   return (
-    <div className="bg-white p-4 rounded shadow">
+    <div className="bg-white my-4 p-4 rounded shadow">
       <textarea
         className="w-full p-2 border rounded resize-none"
         rows="6"
