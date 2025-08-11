@@ -13,6 +13,7 @@
     "@fontsource/handlee": "^5.2.6",
     "@google/genai": "^1.13.0",
     "@tailwindcss/vite": "^4.1.11",
+    "@vercel/speed-insights": "^1.2.0",
     "groq-sdk": "^0.30.0",
     "gsap": "^3.13.0",
     "lucide-react": "^0.539.0",

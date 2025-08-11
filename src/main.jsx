@@ -7,6 +7,7 @@ import App from './App.jsx'
 import Landing from './pages/Landing.jsx'
 import DashBoard from './pages/Dashboard.jsx'
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements  } from 'react-router-dom'
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 const router = createBrowserRouter(
   createRoutesFromElements(
