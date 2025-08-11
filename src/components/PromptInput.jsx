@@ -1,8 +1,8 @@
 const PromptInput = ({ prompt, setPrompt, handleSubmit }) => {
   return (
-    <div className="bg-white dark:bg-gray-800 my-4 p-4 rounded shadow transition-colors duration-300">
+    <div className="bg-white dark:bg-black my-4 p-4 rounded shadow transition-colors duration-300">
       <textarea
-        className="w-full p-2 border border-gray-300 dark:border-gray-600 rounded resize-none bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300"
+        className="w-full p-2 border border-gray-300 dark:border-gray-600 rounded resize-none bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300"
         rows="6"
         value={prompt}
         onChange={(e) => setPrompt(e.target.value)}
