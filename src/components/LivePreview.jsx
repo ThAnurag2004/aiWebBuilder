@@ -17,11 +17,11 @@ const LivePreview = ({ code }) => {
   }, [code]);
 
   return (
-    <div className="bg-white md:h-full h-screen w-full rounded shadow overflow-hidden">
+    <div className="bg-white dark:bg-gray-800 md:h-full h-screen w-full rounded shadow dark:shadow-gray-900 overflow-hidden transition-colors duration-300">
       <iframe
         ref={iframeRef}
         title="Preview"
-        className="w-full h-full border-none"
+        className="w-full h-full border-none bg-white dark:bg-gray-900"
         style={{ minHeight: 0 }}
       />
     </div>

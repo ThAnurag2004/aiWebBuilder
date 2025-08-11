@@ -1,8 +1,8 @@
 const PromptInput = ({ prompt, setPrompt, handleSubmit }) => {
   return (
-    <div className="bg-white my-4 p-4 rounded shadow">
+    <div className="bg-white dark:bg-gray-800 my-4 p-4 rounded shadow transition-colors duration-300">
       <textarea
-        className="w-full p-2 border rounded resize-none"
+        className="w-full p-2 border border-gray-300 dark:border-gray-600 rounded resize-none bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300"
         rows="6"
         value={prompt}
         onChange={(e) => setPrompt(e.target.value)}
@@ -10,7 +10,7 @@ const PromptInput = ({ prompt, setPrompt, handleSubmit }) => {
       />
       <button
         onClick={handleSubmit}
-        className="mt-2 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+        className="mt-2 px-4 py-2 bg-blue-600 dark:bg-blue-500 text-white rounded hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors duration-300"
       >
         Generate UI
       </button>
