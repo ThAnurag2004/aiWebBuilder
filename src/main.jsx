@@ -6,7 +6,8 @@ import './index.css'
 import App from './App.jsx'
 import Landing from './pages/Landing.jsx'
 import DashBoard from './pages/Dashboard.jsx'
-import { BrowserRouter, Route, RouterProvider, createBrowserRouter, createRoutesFromElements  } from 'react-router-dom'
+import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements  } from 'react-router-dom'
+import { SpeedInsights } from "@vercel/speed-insights/react"
 import Offline from './pages/Offline.jsx'
 
 const router = createBrowserRouter(
@@ -20,7 +21,8 @@ const router = createBrowserRouter(
 )
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
+  <React.StrictMode>
+    <SpeedInsights/>
     <RouterProvider router={router} />
-  </BrowserRouter>,
+  </React.StrictMode>,
 )
