@@ -8,12 +8,14 @@ import Landing from './pages/Landing.jsx'
 import DashBoard from './pages/Dashboard.jsx'
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements  } from 'react-router-dom'
 import { SpeedInsights } from "@vercel/speed-insights/react"
+import Offline from './pages/Offline.jsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<App />}>
       <Route path='' element={<Landing />} />
       <Route path='/dashboard' element={<DashBoard/>}  />
+      <Route path='/offline' element={<Offline />}  />
     </Route>
   )
 )

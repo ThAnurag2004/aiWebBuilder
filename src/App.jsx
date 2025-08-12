@@ -1,10 +1,17 @@
 import "./App.css";
-import Landing from "./pages/Landing";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { Outlet } from "react-router-dom";
+import useOnlineStatus from "./hooks/useOnlineStatus";
+import Offline from "./pages/Offline";
 
 function App() {
+  const isOnline = useOnlineStatus();
+
+  if(!isOnline){
+    return <Offline />
+  }
+  
   return (
     <div
       className="w-full min-h-screen bg-white overflow-x-hidden
