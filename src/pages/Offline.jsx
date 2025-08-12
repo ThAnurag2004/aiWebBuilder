@@ -1,4 +1,4 @@
-import offlineImage from '../../public/ofimg.png';
+import offlineImage from '/ofimg.png';
 
 function Offline() {
   return (
